@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Discussion Forum</title>
+</head>
+<style>
+    *{
+        font-family: Arial;
+
+    }
+    body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #04AA6D;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+main {
+  padding: 20px;
+}
+
+.post {
+  border: 5px solid#333;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+  max-width: 400px;  
+
+}
+#postContent{
+    border: 5px solid#333;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+
+
+}
+textarea{
+    height: 70px;
+}
+#username{
+    border: 5px solid#333;
+    border-radius: 10px;
+    display: block;
+    margin-bottom: 10px;
+}
+.post_button{
+    background-color: #333;
+    color: azure;
+    border-radius: 5px;
+    height: 40px;
+    width: 60px;
+    font-size: medium;
+}
+.comment {
+  margin-bottom: 10px;
+  border: 5px solid#333;
+  border-radius: 10px;
+  display: block;
+  padding: 10px;
+}
+
+.comment-form {
+  margin-top: 10px;
+}
+
+.comment-form textarea {
+  width: calc(100% - 10px);
+  margin-bottom: 10px;
+  border: 5px solid#333;
+  border-radius: 10px;
+  display: block;
+}
+
+.comment-form input {
+  margin-bottom: 10px;
+  border: 5px solid#333;
+  border-radius: 10px;
+  display: block;
+}
+
+.comment-form button {
+  padding: 5px 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 40px 60px;
+}
+
+.comment-form button:hover {
+  background-color: #555;
+}
+
+</style>
+<body>
+  <header>
+    <h1>Discussion Forum</h1>
+  </header>
+
+  <main>
+    <section id="posts">
+      <!-- Previous posts will be inserted here -->
+    </section>
+
+    <form id="postForm">
+      <input type="text" id="username" placeholder="Your username">
+      <textarea id="postContent" rows="600" cols="50" placeholder="Write your post here..."  cols="50"></textarea>
+      <button class="post_button" type="submit">Post</button>
+    </form>
+  </main>
+
+  <script src="script2.js"></script>
+</body>
+</html>
