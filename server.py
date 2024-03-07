@@ -28,7 +28,7 @@ def HandleUser(s1,addr, users_db):
             
             if (file_data is not None):
                 if os.path.isfile(os.getcwd()+'\\'+file_data.groups(0)[0]):
-                    if file_data.groups(0)[1] not in ['png','jpg']:
+                    if file_data.groups(0)[1] not in ['png','jpg','ico']:
                         file_name = file_data.groups(0)[0]
                         file = open(file_name).read()
                         header = f'HTTP/1.1 200 OK\r\n\r\n'
@@ -45,6 +45,7 @@ def HandleUser(s1,addr, users_db):
 
             if post_data is not None:
                 post_origin = re.search(pattern_origin, request)
+                print(post_origin.groups(2)[0])
                 file= open('user_page.html').read()
                 header = f'HTTP/1.1 200 OK\r\n\r\n'
                 header2 ='Content-Length:{len(file)}\r\nContent-Type:text/html; charset=utf-8\r\n\r\n'
