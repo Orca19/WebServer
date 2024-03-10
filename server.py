@@ -66,7 +66,6 @@ def HandleUser(s1,addr, users_db):
                     
                     print(users_db)
                     users_db.to_csv('users.csv')
-        #s1.close()
     
     
 
