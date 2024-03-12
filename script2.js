@@ -1,5 +1,4 @@
 // Load existing posts with comments from local storage or initialize an empty array
-localStorage.clear()
 let postsData = JSON.parse(localStorage.getItem('savedPosts')) || [];
 
 // Function to display posts and comments
@@ -12,10 +11,10 @@ function displayPosts() {
         postElement.className = 'post';
 
         postElement.innerHTML = `
-            <span style="font-size: 25px; color: #067e52; font-weight:bold">${post.username}</span>
+            <span style="font-size: 25px; font-style: bold; font-weight:bold">${post.username}</span>
             <br> 
             <span style="margin-bottom: 32px;"> ${post.content}</form><br>
-            <button style="background-color: #333;height:40px; width:100px;color: azure;border-radius: 5px; margin-top: 10px" onclick="toggleComments(${index})">Show Comments</button>
+            <button style="background-color: #333;height:40px; width:100px;color: azure;border-radius: 5px; margin-top: 10px" id="show-comments" onclick="toggleComments(${index})">Show Comments</button>
             <div id="comments-${index}" style="display:none;">
                 ${renderComments(post.comments)}
             </div>
